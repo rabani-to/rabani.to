@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Goldman:wght@700&family=Montserrat:wght@500&family=Quantico:wght@700&family=Roboto+Slab:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  background: black;
+}
+
+:root {
+  --animate-delay: 0.25s;
+}
+
+[hidden="true"],
+[hidden=""] {
+  display: none;
+}
+
+.appear:not(.animate__animated) {
+  visibility: hidden;
+}
+
+body.make-pointer-bigger [data-type="custom-pointer"] {
+  width: 80%;
+  height: 80%;
+}
+
+button,
+a {
+  cursor: none;
+}

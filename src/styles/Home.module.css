@@ -1,0 +1,6 @@
+.Hero {
+  background: linear-gradient(#fff 20%, #999);
+  background-clip: text;
+  animation: gradients 1s ease-in-out infinite alternate-reverse;
+  -webkit-text-fill-color: transparent;
+}
