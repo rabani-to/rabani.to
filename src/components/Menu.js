@@ -42,17 +42,17 @@ function Menu({ show, onClose }) {
           </nav>
           <menu className="max-w-3xl">
             <ul className="flex flex-col font-roboto font-bold text-7xl">
-              <Link href="/">
+              <Link href="/about">
                 <a className="py-4 hover:line-through animate__animated animate__fadeInUp animate__delay-1s">
                   About.
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/manifesto">
                 <a className="border-t py-4 hover:line-through animate__animated animate__fadeInUp animate__delay-2s">
                   Manifesto.
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/contact">
                 <a className="border-t py-4 hover:line-through animate__animated animate__fadeInUp animate__delay-3s">
                   Contact.
                 </a>

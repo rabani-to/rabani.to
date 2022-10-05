@@ -10,13 +10,13 @@ function Footer() {
         <a className="font-montse font-bold">Radish 2022</a>
       </Link>
       <div className="flex-grow" />
-      <Link href="/">
-        <a>
+      <Link href="https://github.com/rabani-to">
+        <a target="_blank">
           <BsGithub className="text-2xl" />
         </a>
       </Link>
-      <Link href="/">
-        <a>
+      <Link href="https://twitter.com/d_rabanito">
+        <a target="_blank">
           <IoLogoTwitter className="text-2xl" />
         </a>
       </Link>

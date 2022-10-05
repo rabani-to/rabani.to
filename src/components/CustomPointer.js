@@ -18,6 +18,7 @@ function CustomPointer() {
       })
   }, [])
 
+  if (x == y && y == 0) return null
   return (
     <div
       className="fixed pointer-events-none flex items-center justify-center z-50"
