@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import Link from "next/link"
 
 import { classnames } from "@/lib/helpers"
@@ -5,12 +6,24 @@ import Radish from "./Radish"
 import Footer from "./Footer"
 
 function Menu({ show, onClose }) {
+  const [canRender, setCanRender] = useState(false)
+
+  useEffect(() => {
+    if (!canRender && show) {
+      setCanRender(true)
+    }
+  }, [show])
+
   return (
     <div
       className={classnames(
         "cursor-none fixed bg-black z-20 inset-0",
         "animate__animated animate__faster",
-        show ? "animate__fadeInRight" : "animate__fadeOutRight"
+        canRender
+          ? show
+            ? "animate__fadeInRight"
+            : "animate__fadeOutRight"
+          : "hidden"
       )}
     >
       <main className="max-w-7xl mx-auto flex space-y-4 flex-col px-4 text-white min-h-screen">
