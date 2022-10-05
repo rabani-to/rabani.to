@@ -10,12 +10,6 @@ function CustomPointer() {
       setPoints({ x, y })
     }
     window.addEventListener("mousemove", handleMouseMove)
-    function makePointerBigger() {
-      document.body.classList.add("make-pointer-bigger")
-    }
-    function makePointerSmaller() {
-      document.body.classList.remove("make-pointer-bigger")
-    }
     document
       .querySelectorAll("a, button, [data-type='blur-clear']")
       .forEach((/** @type { HTMLDivElement } */ element) => {
@@ -43,6 +37,13 @@ function CustomPointer() {
       </div>
     </div>
   )
+}
+
+function makePointerBigger() {
+  document.body.classList.add("make-pointer-bigger")
+}
+function makePointerSmaller() {
+  document.body.classList.remove("make-pointer-bigger")
 }
 
 export default CustomPointer
