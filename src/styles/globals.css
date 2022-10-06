@@ -28,6 +28,8 @@ body.make-pointer-bigger [data-type="custom-pointer"] {
 }
 
 button,
-a {
+a,
+[data-type="blur-clear"],
+[data-type="blur-clear"] * {
   cursor: none;
 }
