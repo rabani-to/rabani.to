@@ -1,12 +1,14 @@
+import { useEffect } from "react"
 import Image from "next/image"
 
-import { classnames } from "@/lib/helpers"
+import { classnames, debounceEvent } from "@/lib/helpers"
 
 import asset_distributed from "@/assets/distributed.svg"
 import asset_multicultural from "@/assets/multicultural.svg"
 import asset_reliable from "@/assets/reliable.svg"
 
 function InfoCards() {
+  useAppear()
   return (
     <div className="flex space-x-4">
       <InfoCard title="Multicultural" icon={asset_multicultural}>
@@ -56,6 +58,29 @@ function InfoCard({ title, icon, children, className }) {
       </p>
     </div>
   )
+}
+
+function useAppear() {
+  useEffect(() => {
+    function handleScroll() {
+      const halfScreenHView = window.innerHeight * 0.25
+      const isOutOfScreenContext = window.scrollY > halfScreenHView
+      if (isOutOfScreenContext) {
+        document
+          .querySelectorAll(".appear")
+          .forEach((/** @type { HTMLDivElement } */ node) => {
+            node.classList.add(
+              "animate__animated",
+              "animate__fadeInUp",
+              "animate__faster"
+            )
+          })
+      }
+    }
+    const debouncedScroll = debounceEvent(handleScroll, 60)
+    document.addEventListener("scroll", debouncedScroll)
+    return () => window.removeEventListener("scroll", debouncedScroll)
+  }, [])
 }
 
 export default InfoCards

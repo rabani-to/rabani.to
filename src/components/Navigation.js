@@ -1,32 +1,10 @@
-import { Fragment, useEffect, useState } from "react"
+import { Fragment, useState } from "react"
 
-import { debounceEvent } from "@/lib/helpers"
 import Menu from "./Menu"
 import Radish from "./Radish"
 
 function Navigation() {
   const [showMenu, setShowMenu] = useState(false)
-
-  useEffect(() => {
-    function handleScroll() {
-      const halfScreenHView = window.innerHeight * 0.3
-      const isOutOfScreenContext = window.scrollY > halfScreenHView
-      if (isOutOfScreenContext) {
-        document
-          .querySelectorAll(".appear")
-          .forEach((/** @type { HTMLDivElement } */ node) => {
-            node.classList.add(
-              "animate__animated",
-              "animate__fadeInUp",
-              "animate__faster"
-            )
-          })
-      }
-    }
-    const debouncedScroll = debounceEvent(handleScroll, 60)
-    document.addEventListener("scroll", debouncedScroll)
-    return () => window.removeEventListener("scroll", debouncedScroll)
-  }, [])
 
   return (
     <Fragment>
