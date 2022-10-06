@@ -12,23 +12,8 @@ import SeoTags from "@/components/SeoTags"
 
 import styles from "@/styles/Home.module.css"
 
-const WORD = ["Develop", "Design", "Create", "Deploy", "Launch"]
 export default function HomePage() {
-  const [text, setText] = useState("")
-
-  useEffect(() => {
-    let timer = null
-    function nextText() {
-      setText((text) => {
-        const nextIdx = WORD.indexOf(text) + 1
-        return WORD[nextIdx] || WORD[0]
-      })
-      timer = setTimeout(nextText, 1_200)
-    }
-    nextText()
-    return () => clearTimeout(timer)
-  }, [])
-
+  const text = useTextMachine()
   return (
     <Fragment>
       <SeoTags />
@@ -85,4 +70,23 @@ export default function HomePage() {
       </Layout>
     </Fragment>
   )
+}
+
+const WORD_LIST = ["Develop", "Design", "Create", "Deploy", "Launch"]
+function useTextMachine() {
+  const [text, setText] = useState("")
+
+  useEffect(() => {
+    let timer = null
+    function nextWord() {
+      setText((text) => {
+        const nextIdx = WORD_LIST.indexOf(text) + 1
+        return WORD_LIST[nextIdx] || WORD_LIST[0]
+      })
+      timer = setTimeout(nextWord, 1_200)
+    }
+    nextWord()
+    return () => clearTimeout(timer)
+  }, [])
+  return text
 }
