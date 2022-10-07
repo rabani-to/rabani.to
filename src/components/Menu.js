@@ -41,7 +41,7 @@ function Menu({ show, onClose }) {
             </button>
           </nav>
           <menu className="max-w-3xl">
-            <ul className="flex flex-col font-roboto font-bold text-7xl">
+            <ul className="flex flex-col font-roboto font-bold text-5xl md:text-7xl">
               <Link href="/about">
                 <a className="py-4 hover:line-through animate__animated animate__fadeInUp animate__delay-1s">
                   About.
