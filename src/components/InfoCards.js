@@ -10,7 +10,7 @@ import asset_reliable from "@/assets/reliable.svg"
 function InfoCards() {
   useAppear()
   return (
-    <div className="flex space-x-4">
+    <div className="flex flex-col md:flex-row gap-12 md:gap-4">
       <InfoCard title="Multicultural" icon={asset_multicultural}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
         asperiores esse, culpa consectetur repudiandae vitae eveniet vel
