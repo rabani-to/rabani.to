@@ -40,11 +40,11 @@ export default function HomePage() {
             <p
               className={classnames(
                 "animate__animated animate__fadeInUp",
-                "text-gray-400 mt-2 max-w-2xl"
+                "text-gray-400 mt-2 max-w-lg"
               )}
             >
-              We are a Latin American team that helps you create Web3 primitives
-              to boost up your ideas. Design and develop on-chain systems.
+              We are a Software Development company that helps DAOs create
+              solutions for their on-chain systems.
             </p>
             <Link href="/contact">
               <a className="flex group items-center space-x-2 border-2 border-white text-lg font-bold py-4 px-6 mt-8">
