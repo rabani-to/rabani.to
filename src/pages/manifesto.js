@@ -12,7 +12,7 @@ export default function ManifestoPage() {
         <Navigation />
         <div className="min-h-screen flex flex-col lg:flex-row gap-12">
           <section className="lg:text-right overflow-hidden">
-            <h2 className="text-[6rem] leading-none font-roboto font-bold">
+            <h2 className="text-7xl md:text-[6rem] leading-none font-roboto font-bold">
               The
               <br />
               Radish <br />

@@ -30,7 +30,7 @@ export default function HomePage() {
             <p
               className={classnames(
                 styles.Hero,
-                "text-[8rem] font-roboto font-bold leading-none"
+                "text-5xl md:text-[8rem] font-roboto font-bold leading-none"
               )}
             >
               <span>{text}</span>
@@ -54,15 +54,19 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-        <section className="pt-44">
+        <section className="pt-24 md:pt-44">
           <InfoCards />
-          <div className="flex justify-end mt-24">
+          <div className="flex md:justify-end mt-24">
             <Link href="/manifesto">
               <a
                 title="Read our manifesto"
-                className="text-[9rem] hover:line-through text-right bg-black max-w-2xl font-bold leading-none"
+                className="text-7xl md:text-[9rem] hover:line-through md:text-right bg-black max-w-2xl font-bold leading-none"
               >
-                The Radish Manifesto.
+                The
+                <br />
+                Radish
+                <br />
+                Manifesto.
               </a>
             </Link>
           </div>
