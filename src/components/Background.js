@@ -4,8 +4,9 @@ function Background() {
       <div className="bg-black/75 fixed inset-0" />
       <video
         loop
-        className="w-full h-full object-cover"
-        src="/boo.mp4"
+        muted
+        className="w-screen h-screen object-cover"
+        src="/fondo_low.mp4"
         autoPlay
       />
     </div>
