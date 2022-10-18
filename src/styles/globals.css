@@ -27,6 +27,10 @@ body.make-pointer-bigger [data-type="custom-pointer"] {
   height: 80%;
 }
 
+body.make-pointer-bigger [data-type="custom-pointer"] > * {
+  transform: scale(1.15) rotate(-10deg);
+}
+
 button,
 a,
 [data-type="blur-clear"],
