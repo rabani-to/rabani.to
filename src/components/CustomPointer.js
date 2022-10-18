@@ -21,7 +21,7 @@ function CustomPointer() {
   if (x == y && y == 0) return null
   return (
     <div
-      className="fixed pointer-events-none flex items-center justify-center z-50"
+      className="fixed pointer-events-none hidden lg:flex items-center justify-center z-50"
       style={{
         top: -POINTER_SIZE * 0.5,
         left: -POINTER_SIZE * 0.5,
@@ -34,7 +34,7 @@ function CustomPointer() {
         data-type="custom-pointer"
         className="flex transition-all items-center justify-center rounded-full bg-white/5 w-full h-full"
       >
-        <ImCross className="text-white text-xs" />
+        <ImCross className="text-white text-xs transition-transform" />
       </div>
     </div>
   )
