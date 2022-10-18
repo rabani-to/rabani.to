@@ -10,7 +10,7 @@ function Layout({ className, children }) {
       <CustomPointer />
       <main
         className={classnames(
-          "cursor-none relative max-w-7xl mx-auto z-[1] flex flex-col px-4 text-white min-h-screen",
+          "lg:cursor-none relative max-w-7xl mx-auto z-[1] flex flex-col px-4 text-white min-h-screen",
           className
         )}
       >
