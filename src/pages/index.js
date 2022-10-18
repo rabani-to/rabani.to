@@ -22,7 +22,7 @@ export default function HomePage() {
         <section
           className={classnames(
             "animate__animated animate__fadeIn",
-            "flex-grow min-h-screen flex flex-col"
+            "flex-grow min-h-screen flex flex-col z-[1]"
           )}
         >
           <Navigation />
@@ -30,12 +30,12 @@ export default function HomePage() {
             <p
               className={classnames(
                 styles.Hero,
-                "text-5xl md:text-[8rem] font-roboto font-bold leading-none"
+                "text-7xl md:text-[8rem] font-roboto font-bold leading-none"
               )}
             >
               <span>{text}</span>
               <br />
-              Web3 Native Solutions.
+              Web3 <span className="hidden lg:inline">Native</span> Solutions.
             </p>
             <p
               className={classnames(
