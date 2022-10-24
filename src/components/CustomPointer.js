@@ -11,7 +11,7 @@ function CustomPointer() {
     }
     window.addEventListener("mousemove", handleMouseMove)
     document
-      .querySelectorAll("a, button, [data-type='blur-clear']")
+      .querySelectorAll("a, button, [data-type='blur-clear'], [title]")
       .forEach((/** @type { HTMLDivElement } */ element) => {
         element.addEventListener("mouseenter", makePointerBigger)
         element.addEventListener("mouseleave", makePointerSmaller)
