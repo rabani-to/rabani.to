@@ -18,31 +18,30 @@ export default function AboutPage() {
       <SeoTags />
       <Layout>
         <Navigation />
-        <div className="min-h-screen flex flex-col">
-          <h2 className="text-7xl font-roboto font-bold">About</h2>
-          <section className="max-w-3xl mt-10">
+        <div className="mt-12 min-h-screen flex flex-col">
+          <h2 className="text-7xl font-roboto font-bold">The team</h2>
+          <section className="max-w-4xl mt-10">
             <div className="max-w-xl text-gray-400 flex flex-col space-y-2">
               <p>
-                We are a Latin American team that helps DAOs create, design and
-                develop Web3 primitives.
-              </p>
-              <p>
                 Radish solves client{"'"}s challenges by providing value,
-                ownership and trust. We are an engineering team that joins DAOs
-                face descentralization biases when creating software for
-                on-chain systems.
+                ownership and trust.
               </p>
               <p>
-                Wanna join us?{" "}
+                We are an engineering team that joins DAOs face
+                descentralization biases when creating software for on-chain
+                systems.
+              </p>
+              <p>
+                Do you want to join us?{" "}
                 <Link href="#">
                   <a className="text-white hover:underline">
-                    See our open positions.
+                    See open positions.
                   </a>
                 </Link>
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-8 mt-12">
+            <div className="flex flex-wrap gap-12 mt-12">
               <Profile
                 image={asset_denny}
                 github="https://github.com/d3portillo"

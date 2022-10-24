@@ -35,8 +35,8 @@ export default function ContactPage() {
       <SeoTags />
       <Layout>
         <Navigation />
-        <div className="min-h-screen flex flex-col space-y-4">
-          <h2 className="text-7xl font-roboto font-bold">Let{"'"}s chat</h2>
+        <div className="mt-12 min-h-screen flex flex-col space-y-4">
+          <h2 className="text-7xl font-roboto font-bold">Contact us</h2>
           <form
             method="POST"
             onSubmit={handleSubmit}
