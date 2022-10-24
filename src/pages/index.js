@@ -54,7 +54,9 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-        <section className="pt-24 md:pt-44">
+        <section>
+          <CroppedBorder />
+          <div className="pt-24 md:pt-44" />
           <InfoCards />
           <div className="flex md:justify-end mt-24">
             <Link href="/manifesto">
@@ -73,6 +75,14 @@ export default function HomePage() {
         </section>
       </Layout>
     </Fragment>
+  )
+}
+
+function CroppedBorder() {
+  return (
+    <div className="mt-[-3rem] h-[3rem] flex justify-center items-end">
+      <div className="border-x-transparent border-y-black border-b-[2rem] lg:border-b-[3rem] border-l-[100vw]" />
+    </div>
   )
 }
 
