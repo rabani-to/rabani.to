@@ -1,0 +1,5 @@
+.Hero {
+  background: linear-gradient(#fff 25%, #666);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
