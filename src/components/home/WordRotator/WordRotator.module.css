@@ -1,10 +1,11 @@
 .animateWords {
   animation: do-rotate 6s infinite;
+  animation-delay: 0.6s;
   -webkit-text-fill-color: white;
 }
 
 .animateWords li {
-  padding: .1em 0;
+  padding: 0.1em 0;
 }
 
 @keyframes do-rotate {
