@@ -1,19 +1,21 @@
-import { Fragment, useEffect, useState } from "react"
+import { Fragment } from "react"
 import Link from "next/link"
 
-import { classnames } from "@/lib/helpers"
-import InfoCards from "@/components/InfoCards"
-import Background from "@/components/Background"
-
 import { HiArrowRight } from "react-icons/hi"
+
+import { classnames } from "@/lib/helpers"
 import Navigation from "@/components/Navigation"
 import Layout from "@/components/Layout"
 import SeoTags from "@/components/SeoTags"
 
-import styles from "@/styles/Home.module.css"
+import InfoCards from "@/components/home/InfoCards"
+import Background from "@/components/home/Background"
+import WordRotator from "@/components/home/WordRotator"
+import Manifesto from "@/components/home/Manifesto"
+import TriangledBorder from "@/components/home/TriangledBorder"
+import styles from "@/components/home/Home.module.css"
 
 export default function HomePage() {
-  const text = useTextMachine()
   return (
     <Fragment>
       <SeoTags />
@@ -27,16 +29,16 @@ export default function HomePage() {
         >
           <Navigation />
           <div className="flex-grow flex flex-col items-start justify-center">
-            <p
+            <div
               className={classnames(
                 styles.Hero,
                 "text-7xl md:text-[8rem] font-roboto font-bold leading-none"
               )}
             >
-              <span>{text}</span>
+              <WordRotator />
               <br />
               Web3 <span className="hidden lg:inline">Native</span> Solutions.
-            </p>
+            </div>
             <p
               className={classnames(
                 "animate__animated animate__fadeInUp",
@@ -55,52 +57,12 @@ export default function HomePage() {
           </div>
         </section>
         <section>
-          <CroppedBorder />
+          <TriangledBorder />
           <div className="pt-24 md:pt-44" />
           <InfoCards />
-          <div className="flex md:justify-end mt-24">
-            <Link href="/manifesto">
-              <a
-                title="Read our manifesto"
-                className="text-7xl md:text-[9rem] hover:line-through md:text-right bg-black max-w-2xl font-bold leading-none"
-              >
-                The
-                <br />
-                Radish
-                <br />
-                Manifesto.
-              </a>
-            </Link>
-          </div>
+          <Manifesto />
         </section>
       </Layout>
     </Fragment>
   )
-}
-
-function CroppedBorder() {
-  return (
-    <div className="mt-[-3rem] h-[3rem] flex justify-center items-end">
-      <div className="border-x-transparent border-y-black border-b-[2rem] lg:border-b-[3rem] border-l-[100vw]" />
-    </div>
-  )
-}
-
-const WORD_LIST = ["Develop", "Design", "Create", "Deploy", "Launch"]
-function useTextMachine() {
-  const [text, setText] = useState("")
-
-  useEffect(() => {
-    let timer = null
-    function nextWord() {
-      setText((text) => {
-        const nextIdx = WORD_LIST.indexOf(text) + 1
-        return WORD_LIST[nextIdx] || WORD_LIST[0]
-      })
-      timer = setTimeout(nextWord, 1_200)
-    }
-    nextWord()
-    return () => clearTimeout(timer)
-  }, [])
-  return text
 }
