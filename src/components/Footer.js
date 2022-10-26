@@ -15,7 +15,7 @@ function Footer() {
           <BsGithub className="text-2xl" />
         </a>
       </Link>
-      <Link href="https://twitter.com/d_rabanito">
+      <Link href="https://twitter.com/radish_systems">
         <a className="p-2" target="_blank">
           <IoLogoTwitter className="text-2xl" />
         </a>
