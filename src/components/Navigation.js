@@ -13,7 +13,7 @@ function Navigation() {
         <div className="flex-grow" />
         <button
           onClick={() => setShowMenu(true)}
-          className="w-8 h-8 group space-y-1 flex flex-col justify-center"
+          className="w-8 h-8 m-2 group space-y-1 flex flex-col justify-center"
         >
           <div className="w-full transition-all group-hover:bg-white/90 group-hover:w-9/12 h-[3px] bg-white/80"></div>
           <div className="w-8/12 transition-all group-hover:bg-white/90 group-hover:w-full h-[3px] bg-white/80"></div>
