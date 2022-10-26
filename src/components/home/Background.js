@@ -1,13 +1,14 @@
-import Image from "next/image"
-import asset_static_bg from "@/assets/static-bg.jpg"
-
-const PLACEHOLDER_IMAGE = "__PLACEHOLDER_IMAGE"
+const PLACEHOLDER_ELEMENT = "__PLACEHOLDER_ELEMENT"
 function removePlaceholderImage() {
-  const item = document.querySelector(`#${PLACEHOLDER_IMAGE}`)
+  const item = document.querySelector(`#${PLACEHOLDER_ELEMENT}`)
   if (item) {
     const hiddenAlready = item.classList.contains("animate__animated")
     if (hiddenAlready) return
-    item.classList.add("animate__animated", "animate__fadeOut")
+    item.classList.add(
+      "animate__animated",
+      "animate__fadeOut",
+      "animate__faster"
+    )
   }
 }
 
@@ -24,17 +25,9 @@ function Background() {
         autoPlay
       />
       <section
-        id={PLACEHOLDER_IMAGE}
-        className="absolute w-screen h-screen inset-0"
-      >
-        <Image
-          placeholder="blur"
-          objectFit="cover"
-          alt=""
-          layout="fill"
-          src={asset_static_bg}
-        />
-      </section>
+        id={PLACEHOLDER_ELEMENT}
+        className="absolute w-screen h-screen inset-0 bg-black"
+      />
     </div>
   )
 }
