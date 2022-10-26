@@ -12,30 +12,26 @@ function InfoCards() {
   return (
     <div className="flex flex-col md:flex-row gap-12 md:gap-4">
       <InfoCard title="Multicultural" icon={asset_multicultural}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
-        asperiores esse, culpa consectetur repudiandae vitae eveniet vel
-        officiis dicta ad at ipsam quibusdam explicabo. Earum beatae quaerat
-        voluptate cum tempore!
+        Latin America is our home, the reason we exist. Talent comes in no
+        specific shape or color. Formless. We know the systems we build are
+        chained, but yet everyone is free of mind and soul.
       </InfoCard>
       <InfoCard
         className="animate__delay-1s"
         title="Reliable & Efficient"
         icon={asset_reliable}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
-        asperiores esse, culpa consectetur repudiandae vitae eveniet vel
-        officiis dicta ad at ipsam quibusdam explicabo. Earum beatae quaerat
-        voluptate cum tempore!
+        Our philosophy is to provide trustness by building consistent and
+        functional software for a better decentralized. Radish will mitigate,
+        thrive and help DAOs in the unexpected.
       </InfoCard>
       <InfoCard
         className="animate__delay-2s"
         title="Distributed"
         icon={asset_distributed}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
-        asperiores esse, culpa consectetur repudiandae vitae eveniet vel
-        officiis dicta ad at ipsam quibusdam explicabo. Earum beatae quaerat
-        voluptate cum tempore!
+        As the software we help DAOs create, our team is not framed to the
+        common thinking. The idea of being centralized simply kills us.
       </InfoCard>
     </div>
   )
@@ -43,7 +39,7 @@ function InfoCards() {
 
 function InfoCard({ title, icon, children, className }) {
   return (
-    <div className={classnames("appear", className, "flex flex-col")}>
+    <div className={classnames("appear", className, "w-full flex flex-col")}>
       <div data-type="blur-clear" className="w-16 h-16">
         <Image alt="" src={icon} width={320} height={320} layout="responsive" />
       </div>
