@@ -78,13 +78,13 @@ export default function AboutPage() {
 function Profile({ name, image, children, github, twitter, linkedin }) {
   return (
     <div className="flex space-x-2">
-      <div className="w-20 h-20 rounded-full overflow-hidden">
+      <div className="relative w-20 h-20 rounded-full overflow-hidden">
         <Image
-          width={420}
-          height={420}
+          placeholder="blur"
+          objectFit="cover"
           src={image}
-          layout="responsive"
-          alt=""
+          layout="fill"
+          alt={name}
         />
       </div>
       <div className="flex flex-col">
