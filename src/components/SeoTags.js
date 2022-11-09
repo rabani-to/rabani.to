@@ -3,10 +3,10 @@ import { NextSeo } from "next-seo"
 const URL = "https://radish.la"
 const TWITTER_HANDLE = "radish_la"
 export const DEFAULT_CONFIG = {
-  title: "The Radish. Team",
+  title: "The Radish Team",
   url: URL,
   seoURL: `${URL}/seo.png`,
-  description: "Your friendly team for on-chain solutions.",
+  description: "Your friendly engineering team for on-chain solutions.",
 }
 
 /**
