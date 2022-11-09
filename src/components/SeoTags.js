@@ -1,19 +1,50 @@
-import Head from "next/head"
+import { NextSeo } from "next-seo"
 
-function SeoTags() {
+const URL = "https://radish.la"
+const TWITTER_HANDLE = "radish_la"
+export const DEFAULT_CONFIG = {
+  title: "The Radish. Team",
+  url: URL,
+  seoURL: `${URL}/seo.png`,
+  description: "Your friendly team for on-chain solutions.",
+}
+
+/**
+ * @param { Partial<DEFAULT_CONFIG> } props
+ */
+function SeoTags(props = {}) {
+  const SEO = { ...DEFAULT_CONFIG, ...props }
   return (
-    <Head>
-      <title>The Radish Team</title>
-      <meta
-        name="description"
-        content="Your friendly people for on-chain systems."
-      />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
-    </Head>
+    <NextSeo
+      title={SEO.title}
+      additionalLinkTags={[
+        {
+          rel: "icon",
+          type: "image/png",
+          href: "/favicon.png",
+        },
+      ]}
+      twitter={{
+        cardType: "summary_large_image",
+        handle: TWITTER_HANDLE,
+        site: SEO.url,
+      }}
+      openGraph={{
+        type: "website",
+        url: SEO.url,
+        title: SEO.title,
+        description: SEO.description,
+        images: [
+          {
+            url: SEO.seoURL,
+            alt: SEO.seoURL,
+            width: 1200,
+            height: 630,
+          },
+        ],
+      }}
+      description={SEO.description}
+    />
   )
 }
 
