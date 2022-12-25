@@ -7,6 +7,7 @@ const nextConfig = {
       {
         source: "/jobs",
         destination: "https://angel.co/company/radish-la/jobs",
+        permanent: false,
       },
     ]
   },
