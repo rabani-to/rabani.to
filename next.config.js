@@ -2,6 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  async redirects() {
+    return [
+      {
+        source: "/jobs",
+        destination: "https://angel.co/company/radish-la/jobs",
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
