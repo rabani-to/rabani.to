@@ -24,17 +24,17 @@ export default function AboutPage() {
             <div className="max-w-xl text-gray-400 flex flex-col space-y-2">
               <p>
                 Radish solves client{"'"}s challenges by providing value,
-                ownership and trust.
+                ownership, and trust.
               </p>
               <p>
-                We are an engineering team that joins DAOs face
-                descentralization biases when creating software for on-chain
+                We are an engineering team that joins DAOs to face
+                decentralization biases when creating software for on-chain
                 systems.
               </p>
               <p>
                 Do you want to join us?{" "}
-                <Link href="#">
-                  <a className="text-white hover:underline">
+                <Link href="https://angel.co/company/radish-la/jobs">
+                  <a target="_blank" className="text-white hover:underline">
                     See open positions.
                   </a>
                 </Link>
